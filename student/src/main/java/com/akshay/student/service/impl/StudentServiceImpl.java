@@ -21,4 +21,19 @@ public class StudentServiceImpl implements StudentService {
 		return studentList;
 	}
 
+	@Override
+	public void addStudent(Student student) {
+		repo.save(student);
+	}
+
+	@Override
+	public void updateStudent(Student student) {
+		repo.save(student);
+	}
+
+	@Override
+	public void deleteStudent(int studentId) {
+		repo.deleteById(studentId);
+	}
+
 }
